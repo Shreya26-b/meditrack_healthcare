@@ -1,0 +1,82 @@
+/* Login Component Styles */
+.login-box {
+  width: 100%;
+  max-width: 350px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: black;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  background-color: #e1e0e0;
+}
+
+.login-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.login-signup-text {
+  font-size: 0.9rem;
+  text-align: center;
+  color: black;
+}
+
+.signup-link {
+  color: #3b82f6;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  padding: 0.8rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background-color: #2563eb;
+}
+
+/* Login card container */
+.login-card {
+  width: 100%;
+  max-width: 350px;       /* keeps it from stretching too wide */
+  background: #fff;        /* white background */
+  padding: 2rem;           /* space between border and content */
+  border-radius: 12px;     /* rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;               /* vertical gap between inner elements */
+}
+

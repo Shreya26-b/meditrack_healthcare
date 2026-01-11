@@ -1,0 +1,58 @@
+.patient-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f2fbff;
+}
+
+.patient-content {
+  flex: 1;
+  padding: 2rem;
+  color: black;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+/* Vitals */
+.vitals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.vital-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.vital-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.5rem;
+}
+
+.red { color: #ef4444; }
+.blue { color: #3b82f6; }
+.green { color: #22c55e; }
+.purple { color: #a855f7; }
+
+/* Pulse animation */
+.pulse {
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(239,68,68,0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(239,68,68,0); }
+  100% { box-shadow: 0 0 0 0 rgba(239,68,68,0); }
+}

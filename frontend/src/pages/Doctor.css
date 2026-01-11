@@ -1,0 +1,69 @@
+.doctor-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f2fbff;
+}
+
+.doctor-content {
+  flex: 1;
+  padding: 2rem;
+  color: black;
+}
+
+.patient-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.patient-table th {
+  background: #3b82f6;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.patient-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-row {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.table-row:hover {
+  background: #eff6ff;
+}
+
+.action-cell {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}

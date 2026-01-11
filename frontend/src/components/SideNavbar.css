@@ -1,0 +1,45 @@
+.side-navbar {
+  width: 220px;
+  min-height: 100vh;
+  background: #1e3a8a;
+  color: white;
+  padding: 1.5rem 1rem;
+   position: sticky;
+   top: 0;
+    height: 100vh;
+}
+
+.nav-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Remove default list styles */
+.side-navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Anchor styling */
+.nav-link {
+  display: block;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.1s;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(4px);
+}
+
+/* ACTIVE (clicked/current page) */
+.nav-link.active {
+  background: #3b82f6;
+  font-weight: 600;
+  box-shadow: inset 4px 0 0 #93c5fd;
+}

@@ -1,0 +1,71 @@
+/* Page layout */
+.symptom-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f2fbff;
+}
+
+/* Main area */
+.symptom-content {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  padding: 2rem;
+}
+
+/* Card */
+.construction-card {
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Icons */
+.icon-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.health-icon {
+  font-size: 3rem;
+  color: #ef4444;
+}
+
+.tool-icon {
+  position: absolute;
+  font-size: 1.8rem;
+  color: #f59e0b;
+  right: -10px;
+  bottom: -8px;
+}
+
+/* Text styles */
+.construction-card h2 {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.status-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f97316;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.coming-soon {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3b82f6;
+}

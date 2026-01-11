@@ -1,0 +1,67 @@
+/* Container for the whole page */
+.home-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* Left side – login form */
+.home-left {
+  flex: 0.4; /* 40% width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e8f6f5, #f2fbff);
+  padding: 2rem;
+}
+
+/* Right side – image */
+.home-right {
+  flex: 0.6; /* 60% width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2fbff;
+}
+
+/* Image styling */
+.home-image {
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive – stack login above image on small screens */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+  .home-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2fbff;
+  overflow: hidden;  /* ensures image stays within container */
+  padding: 2rem;
+}
+
+
+ .home-right {
+  flex: 1;                     /* 60% width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2fbff;
+  overflow: hidden;               /* keeps image inside container */
+  max-height: 70vh;               /* reduce height relative to viewport */
+}
+}
+
+.home-image {
+  width: 75%;                    /* fill container width */
+  height: 75%;                   /* fill container height */
+  object-fit: cover;              /* maintain aspect ratio */
+  border-radius: 10px;
+}
