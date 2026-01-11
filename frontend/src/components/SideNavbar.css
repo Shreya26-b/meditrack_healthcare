@@ -1,45 +1,67 @@
 .side-navbar {
   width: 220px;
-  min-height: 100vh;
-  background: #1e3a8a;
-  color: white;
+  height: 100vh;
+  background: #ffffff;
   padding: 1.5rem 1rem;
-   position: sticky;
+  border-right: 1px solid #e5e7eb;
+position: sticky;
    top: 0;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Title */
 .nav-title {
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
   font-weight: 600;
+  color: #1e3a8a;
 }
 
-/* Remove default list styles */
-.side-navbar ul {
+/* Nav list */
+.nav-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-/* Anchor styling */
 .nav-link {
   display: block;
-  padding: 0.8rem 1rem;
+  padding: 0.75rem 1rem;
   border-radius: 8px;
-  color: white;
+  color: #1e3a8a;
   text-decoration: none;
-  transition: background 0.2s, transform 0.1s;
+  transition: background 0.2s;
 }
 
-/* Hover effect */
 .nav-link:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateX(4px);
+  background: #eff6ff;
 }
 
-/* ACTIVE (clicked/current page) */
+/* Active */
 .nav-link.active {
-  background: #3b82f6;
+  background: #e0e7ff;
   font-weight: 600;
-  box-shadow: inset 4px 0 0 #93c5fd;
+  border-left: 4px solid #1e3a8a;
+}
+
+/* Spacer pushes signout to bottom */
+.nav-spacer {
+  flex-grow: 1;
+}
+
+/* Signout button */
+.signout-btn {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #1e3a8a;
+  background: white;
+  color: #1e3a8a;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signout-btn:hover {
+  background: #1e3a8a;
+  color: white;
 }
