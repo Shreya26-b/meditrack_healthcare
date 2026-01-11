@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, type FormEvent } from "react";
 import { users } from "../data/Users"; // dummy data
-import "./login.css";
+import "./Login.css";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
