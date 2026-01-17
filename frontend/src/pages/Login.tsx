@@ -44,12 +44,15 @@ const Login: React.FC = () => {
   };
 
   const handleSuccessOk = () => {
-    if (!loggedUser) return;
+  if (!loggedUser) return;
 
-    loggedUser.role === "doctor"
-      ? navigate("/doctor")
-      : navigate("/patient");
-  };
+  if (loggedUser.role === "doctor") {
+    navigate("/doctor");
+  } else {
+    navigate("/patient");
+  }
+};
+
 
   return (
     <div className="login-page">

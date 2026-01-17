@@ -7,6 +7,17 @@ interface User {
   role: string;
 }
 
+interface Appointment {
+  id: number;                // ✅ THIS WAS MISSING
+  issue: string;
+  doctorName: string;
+  patientName: string;
+  date: string;
+  time: string;
+  status: string;
+}
+
+
 const Appointment = () => {
   const [doctors, setDoctors] = useState<User[]>([]);
   const [showPopup, setShowPopup] = useState(false);

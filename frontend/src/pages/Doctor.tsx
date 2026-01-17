@@ -17,12 +17,13 @@ const Doctor = () => {
   const [appointments, setAppointments] = useState<Appointment[]>([]);
   const [page, setPage] = useState(1);
   const rowsPerPage = 5;
+  const loggedInDoctor = JSON.parse(localStorage.getItem("user") || "{}");
 
   const doctor = JSON.parse(localStorage.getItem("user") || "{}");
 
   useEffect(() => {
     const storedAppointments: Appointment[] = JSON.parse(
-      localStorage.getItem("appointments") || "[]"
+      localStorage.getItem("appointments") || "[]",
     );
 
     const today = new Date();
@@ -39,7 +40,7 @@ const Doctor = () => {
     localStorage.setItem("appointments", JSON.stringify(updatedAppointments));
 
     const myAppointments = updatedAppointments.filter(
-      (appt) => appt.doctorName === doctor.name
+      (appt) => appt.doctorName === doctor.name,
     );
 
     setAppointments(myAppointments);
@@ -47,11 +48,11 @@ const Doctor = () => {
 
   const updateStatus = (appointmentId: number, newStatus: string) => {
     const allAppointments = JSON.parse(
-      localStorage.getItem("appointments") || "[]"
+      localStorage.getItem("appointments") || "[]",
     );
 
     const updatedAppointments = allAppointments.map((appt: any) =>
-      appt.id === appointmentId ? { ...appt, status: newStatus } : appt
+      appt.id === appointmentId ? { ...appt, status: newStatus } : appt,
     );
 
     localStorage.setItem("appointments", JSON.stringify(updatedAppointments));
@@ -59,15 +60,15 @@ const Doctor = () => {
     // refresh UI
     setAppointments(
       updatedAppointments.filter(
-        (a: any) => a.doctorName === loggedInDoctor.name
-      )
+        (a: any) => a.doctorName === loggedInDoctor.name,
+      ),
     );
   };
 
   const startIndex = (page - 1) * rowsPerPage;
   const paginatedData = appointments.slice(
     startIndex,
-    startIndex + rowsPerPage
+    startIndex + rowsPerPage,
   );
 
   return (
