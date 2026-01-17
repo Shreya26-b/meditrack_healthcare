@@ -29,6 +29,7 @@
   outline: none;
   font-size: 1rem;
   background-color: #e1e0e0;
+  color: black;
 }
 
 .login-input:focus {
@@ -62,6 +63,44 @@
   cursor: pointer;
   transition: background 0.3s;
 }
+
+.login-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-error {
+  color: #dc2626;           /* red */
+  font-size: 0.85rem;
+  /* margin-bottom: 0.5rem; */
+  text-align: center;
+  /* font-weight: 500; */
+}
+
+
+.login-popup {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+.login-popup button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 
 .login-button:hover {
   background-color: #2563eb;

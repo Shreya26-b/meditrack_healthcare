@@ -7,9 +7,15 @@ interface ProtectedRouteProps {
 }
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children, role }) => {
-  const storedRole = localStorage.getItem("role");
+  const storedUser = localStorage.getItem("user");
 
-  if (!storedRole || storedRole !== role) {
+  if (!storedUser) {
+    return <Navigate to="/" replace />;
+  }
+
+  const user = JSON.parse(storedUser);
+
+  if (user.role !== role) {
     return <Navigate to="/" replace />;
   }
 

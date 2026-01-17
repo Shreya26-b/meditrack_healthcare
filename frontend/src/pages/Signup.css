@@ -16,6 +16,47 @@
   background-color: #f2fbff;
 }
 
+.signup-error {
+  color: red;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Popup overlay */
+.signup-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Popup card */
+.signup-modal-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 320px;
+  color: black;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.modal-actions button {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #1e3a8a;
+  color: white;
+}
+
 .signup-title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -41,6 +82,7 @@
   outline: none;
   font-size: 1rem;
   background-color: #e1e0e0;
+  color: black;
 }
 
 .signup-input:focus {
@@ -66,7 +108,7 @@
 
 .signup-button {
   padding: 0.8rem 1rem;
-  background-color: #3b82f6;
+  background-color: #1e3a8a;
   color: white;
   font-weight: 500;
   border: none;

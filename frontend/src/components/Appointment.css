@@ -3,14 +3,19 @@
   min-height: 100vh;
   background: #f2fbff;
 }
+.form-error {
+  color: red;
+  text-align: center;
+}
 
 .appointment-content {
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;   /* ✅ STACK vertically */
+  align-items: center;      /* center form & table */
   padding: 2rem;
 }
+
 
 /* Form */
 .appointment-form {
@@ -26,6 +31,10 @@
   text-align: center;
   margin-bottom: 1.5rem;
   color: #1e3a8a;
+}
+
+.table-data {
+  color: black;
 }
 
 /* Inputs */
@@ -122,4 +131,62 @@
   background: #1e3a8a;
   color: white;
   cursor: pointer;
+}
+
+/* Appointment table wrapper */
+.appointment-table-wrapper {
+  width: 100%;
+  max-width: 420px; /* SAME as appointment-form */
+  margin: 2rem auto 0;
+}
+
+/* Title */
+.table-title {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+/* Table */
+.appointment-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.appointment-table th,
+.appointment-table td {
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.appointment-table thead {
+  background: #eff6ff;
+}
+
+.appointment-table th {
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.appointment-table tbody tr {
+  border-top: 1px solid #e5e7eb;
+}
+
+.status-cell {
+  font-weight: 500;
+  color: #ca8a04; /* pending color */
+}
+
+/* Empty state */
+.no-appointments {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  padding: 1rem 0;
 }

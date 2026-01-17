@@ -67,3 +67,47 @@
   background: #cbd5e1;
   cursor: not-allowed;
 }
+
+/* Action cell */
+.action-cell {
+  text-align: left;
+  cursor: default;
+}
+
+/* Common action text */
+.action-text {
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* Confirm */
+.action-text.confirm {
+  color: #2563eb; /* blue */
+}
+
+.action-text.confirm:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+/* Cancel */
+.action-text.cancel {
+  color: #dc2626; /* red */
+}
+
+.action-text.cancel:hover {
+  text-decoration: underline;
+  color: #b91c1c;
+}
+
+/* Separator */
+.action-separator {
+  margin: 0 8px;
+  color: #9ca3af;
+}
+
+/* Disabled */
+.action-disabled {
+  color: #9ca3af;
+}
