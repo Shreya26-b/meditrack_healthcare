@@ -2,15 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SideNavbar from "../components/SideNavbar";
 import "./Doctor.css";
+import type { Appointment } from "../types/Appointment";
 
-interface Appointment {
-  doctorName: string;
-  patientName: string;
-  issue: string;
-  date: string;
-  time: string;
-  status: string;
-}
 
 const Doctor = () => {
   const navigate = useNavigate();
